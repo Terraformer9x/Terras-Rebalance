@@ -3,7 +3,7 @@ Personally tuned tweaks and rebalances for Lethal Company. As of right now there
 
 # Changes
 - Shovel is 8 lbs.
-- Butlers have 4 HP on both Singleplayer and Multiplayer.
+- Butlers have 4 HP on Multiplayer.
 - Mask Hornets travel at their Multiplayer speed on Singleplayer.
 - Mask Hornets and Circuit Bees cannot open doors.
 - Jesters use their Singleplayer begin cranking timer for Multiplayer.
