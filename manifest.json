@@ -1,0 +1,9 @@
+{
+    "name": "TerrasRebalance",
+    "version_number": "1.0.0",
+	"website_url": "https://github.com/Terraformer9x/Terras-Rebalance",
+    "description": "My tweaks and rebalances for Lethal Company.",
+    "dependencies": [
+		"BepInEx-BepInExPack-5.4.2100"
+	]
+}
