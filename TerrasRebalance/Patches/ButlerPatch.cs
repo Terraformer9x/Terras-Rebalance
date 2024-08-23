@@ -9,6 +9,9 @@ public class ButlerPatch
     [HarmonyPostfix]
     private static void ChangeButlerHealth(ref ButlerEnemyAI __instance)
     {
-        __instance.enemyHP = 4;
+        if (StartOfRound.Instance.connectedPlayersAmount > 0)
+        {
+            __instance.enemyHP = 4;
+        }
     }
 }
