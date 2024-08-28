@@ -19,13 +19,13 @@ public class StormyPatch
         {
             if (list[i].opcode == OpCodes.Ldc_R4 && (float)list[i].operand == 1f && list[i + 1].opcode == OpCodes.Ldc_R4 && (float)list[i + 1].operand == 28f)
             {
-                list[i + 1] = new CodeInstruction(OpCodes.Ldc_R4, 42f);
-                list[i + 4] = new CodeInstruction(OpCodes.Ldc_R4, 30f);
+                list[i + 1] = new CodeInstruction(OpCodes.Ldc_R4, 35f);
+                list[i + 4] = new CodeInstruction(OpCodes.Ldc_R4, 25f);
             }
             if (list[i].opcode == OpCodes.Ldc_R4 && (float)list[i].operand == 4f && list[i + 1].opcode == OpCodes.Ldc_R4 && (float)list[i + 1].operand == 20f)
             {
                 list[i] = new CodeInstruction(OpCodes.Ldc_R4, 8f);
-                list[i + 1] = new CodeInstruction(OpCodes.Ldc_R4, 30f);
+                list[i + 1] = new CodeInstruction(OpCodes.Ldc_R4, 25f);
                 break;
             }
         }

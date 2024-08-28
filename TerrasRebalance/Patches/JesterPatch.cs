@@ -12,18 +12,4 @@ public class JesterPatch
     {
         __instance.beginCrankingTimer = Random.Range(25f, 42f);
     }
-
-    [HarmonyPatch(nameof(JesterAI.Update))]
-    [HarmonyPostfix]
-    private static void SlamOpenDoors(ref JesterAI __instance)
-    {
-        if (__instance.currentBehaviourStateIndex == 2 && __instance.agent.speed >= 10f)
-        {
-            __instance.useSecondaryAudiosOnAnimatedObjects = true;
-        }
-        else
-        {
-            __instance.useSecondaryAudiosOnAnimatedObjects = false;
-        }
-    }
 }
