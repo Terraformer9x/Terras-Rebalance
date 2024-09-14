@@ -14,13 +14,13 @@ public class ItemPatch
             switch (item.name)
             {
                 case "Shovel":	
-                    if (Configuration.changeShovelWeight.Value) item.weight = 1.08f;
+                    if (TerrasRebalanceConfig.changeShovelWeight.Value) item.weight = 1.08f;
                     break;
                 case "StopSign":
-                    if (Configuration.changeStopSignWeight.Value) item.weight = 1.2f;
+                    if (TerrasRebalanceConfig.changeStopSignWeight.Value) item.weight = 1.2f;
                     break;
                 case "Jetpack":
-                    if (Configuration.changeJetpackPrice.Value) item.creditsWorth = 700;
+                    if (TerrasRebalanceConfig.changeJetpackPrice.Value) item.creditsWorth = 700;
                     break;
             }
         }

@@ -1,5 +1,5 @@
 # Terra's Rebalances
-A set of *very* specific rebalances I made for Lethal Company. This is meant to moreso be the basis of a modpack I plan on making in the future but I may split up some of the rebalances into their own mods in the future. So for now feel free to use this mod for whatever.
+A set of *very* specific rebalances I made for Lethal Company. This is meant to moreso be the basis of a modpack I plan on making in the future but I may split up some of the rebalances into their own mods in the future. So for now feel free to use this mod for whatever. Each of the changes are toggleable in the config file.
 
 *Please restart Lethal Company if you change any of the config settings.*
 
@@ -14,6 +14,7 @@ A set of *very* specific rebalances I made for Lethal Company. This is meant to 
 	- 25-42 seconds, same as pre-v50.
 - Nutcrackers fire slightly faster when at 2-3 HP.
 	- At 2-3 HP, their first shot takes 1.3 seconds to fire and their second shot takes 1 second to fire.
+- Eyeless Dogs have 10 HP.
 - The maximum duration between lightning strikes on items in stormy weather has been increased slightly.
 
 # Contact

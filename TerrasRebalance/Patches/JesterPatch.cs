@@ -6,7 +6,7 @@ namespace TerrasRebalance.Patches;
 [HarmonyPatch(typeof(JesterAI))]
 public class JesterPatch
 {
-    [HarmonyPatch(nameof(JesterAI.Start))]
+    [HarmonyPatch(typeof(JesterAI), "SetJesterInitialValues")]
     [HarmonyPostfix]
     private static void ChangeJesterTimer(ref JesterAI __instance)
     {

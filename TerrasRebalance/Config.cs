@@ -1,19 +1,22 @@
 ﻿using BepInEx.Configuration;
+using UnityEngine.AI;
 
 namespace TerrasRebalance;
 
-internal class Configuration
+internal class TerrasRebalanceConfig
 {
-    internal static ConfigEntry<bool> changeShovelWeight;
-    internal static ConfigEntry<bool> changeStopSignWeight;
-    internal static ConfigEntry<bool> changeJetpackPrice;
-    internal static ConfigEntry<bool> changeButlerHealth;
-    internal static ConfigEntry<bool> changeBeeBehavior;
-    internal static ConfigEntry<bool> changeNutcrackerBehavior;
-    internal static ConfigEntry<bool> changeJesterTimer;
-    internal static ConfigEntry<bool> changeStormyTimers;
+    internal static ConfigEntry<bool>
+        changeShovelWeight,
+        changeStopSignWeight,
+        changeJetpackPrice,
+        changeButlerHealth,
+        changeBeeBehavior,
+        changeNutcrackerBehavior,
+        changeMouthDogHealth,
+        changeJesterTimer,
+        changeStormyTimers;
 
-    public static void Bind(ConfigFile config)
+    internal static void Bind(ConfigFile config)
     {
         changeShovelWeight = config.Bind(
             "Items",
@@ -56,6 +59,13 @@ internal class Configuration
             true,
             "Nutcrackers at 2-3 HP will shoot slightly faster. (1.3s for the first shot, 1s for the second shot)\n\n" +
             "Disable this if you're using other mods that change the behavior of Nutcrackers."
+        );
+        changeMouthDogHealth = config.Bind(
+            "Entites",
+            "10 HP Eyeless Dogs",
+            true,
+            "Eyeless Dogs have 10 HP instead of 12.\n\n" +
+            "Disable this if you're using other mods that change the behavior of Eyeless Dogs."
         );
         changeJesterTimer = config.Bind(
             "Entites",

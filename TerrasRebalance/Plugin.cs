@@ -20,11 +20,11 @@ public class Plugin : BaseUnityPlugin
     {
         Instance ??= this;
 
-        Configuration.Bind(base.Config);
+        TerrasRebalanceConfig.Bind(base.Config);
 
         Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
 
-        if (Configuration.changeBeeBehavior.Value)
+        if (TerrasRebalanceConfig.changeBeeBehavior.Value)
         {
             Logger.LogInfo("Applying Bees Patch");
             harmony.PatchAll(typeof(CircuitBeesPatch));
@@ -33,7 +33,7 @@ public class Plugin : BaseUnityPlugin
         }
         else Logger.LogInfo("Skipping Bees Patch");
 
-        if (Configuration.changeButlerHealth.Value)
+        if (TerrasRebalanceConfig.changeButlerHealth.Value)
         {
             Logger.LogInfo("Applying Butler Patch");
             harmony.PatchAll(typeof(ButlerPatch));
@@ -41,7 +41,7 @@ public class Plugin : BaseUnityPlugin
         }
         else Logger.LogInfo("Skipping Butler Patch");
 
-        if (Configuration.changeJesterTimer.Value)
+        if (TerrasRebalanceConfig.changeJesterTimer.Value)
         {
             Logger.LogInfo("Applying Jester Patch");
             harmony.PatchAll(typeof(JesterPatch));
@@ -49,7 +49,15 @@ public class Plugin : BaseUnityPlugin
         }
         else Logger.LogInfo("Skipping Jester Patch");
 
-        if (Configuration.changeNutcrackerBehavior.Value)
+        if (TerrasRebalanceConfig.changeMouthDogHealth.Value)
+        {
+            Logger.LogInfo("Applying Mouth Dog Patch");
+            harmony.PatchAll(typeof(MouthDogPatch));
+            Logger.LogInfo("Mouth Dog Patched");
+        }
+        else Logger.LogInfo("Skipping Mouth Dog Patch");
+
+        if (TerrasRebalanceConfig.changeNutcrackerBehavior.Value)
         {
             Logger.LogInfo("Applying Nutcracker Patch");
             harmony.PatchAll(typeof(NutcrackerPatch));
@@ -57,7 +65,7 @@ public class Plugin : BaseUnityPlugin
         }
         else Logger.LogInfo("Skipping Nutcracker Patch");
 
-        if (Configuration.changeShovelWeight.Value || Configuration.changeStopSignWeight.Value || Configuration.changeJetpackPrice.Value)
+        if (TerrasRebalanceConfig.changeShovelWeight.Value || TerrasRebalanceConfig.changeStopSignWeight.Value || TerrasRebalanceConfig.changeJetpackPrice.Value)
         {
             Logger.LogInfo("Applying Items Patch");
             harmony.PatchAll(typeof(ItemPatch));
@@ -65,7 +73,7 @@ public class Plugin : BaseUnityPlugin
         }
         else Logger.LogInfo("Skipping Items Patch");
 
-        if (Configuration.changeStormyTimers.Value)
+        if (TerrasRebalanceConfig.changeStormyTimers.Value)
         {
             Logger.LogInfo("Applying Stormy Patch");
             harmony.PatchAll(typeof(StormyPatch));
