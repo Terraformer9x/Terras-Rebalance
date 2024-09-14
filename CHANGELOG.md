@@ -2,6 +2,7 @@
 
 # Version 1.2.0
 - Eyeless Dogs have 10 HP now instead of 12.
+- Fixed Jester timer patch.
 
 # Version 1.1.0
 - Added a toggle for each of the changes.
